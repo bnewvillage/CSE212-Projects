@@ -1,0 +1,8 @@
+O(n^2) Sorting.cs
+O(n)
+O(n^2)
+O(n)
+
+Prediction:
+Sort1 is O(n) so it will have linear performance to it's input
+Sort2 is O(log n) so it will perform much faster
