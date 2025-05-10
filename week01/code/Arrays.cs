@@ -8,25 +8,22 @@ public static class Arrays
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     public static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
 
-        //Steps to create:
-        //Step 1: Create a For loop that will increment by 1 each iteration, set as 1 initially.
-        //Step 2: Multiply input initial number by each increment.
-        //Step 3: Set the condition to 'less than or equal to' the size of the number of multiples(length) needed.
-        //Step 4: Create an empty array with the size of the length param outside of the loop.
-
-        var array = new double[length - 1];
+        var array = new double[length];
         for (double i = 1; i <= length; i++){
             double multiple = number * i;
             int index = (int)(i-1);
             array[index] = multiple;
         }
 
-        return []; // replace this return statement with your own
+        return array;
+
+        //Plan and Steps:
+        //Step 1: Create a For loop that will increment by 1 each iteration, set as 1 initially.
+        //Step 2: Multiply input initial number by each increment to get our multiple.
+        //Step 3: Set the condition to 'less than or equal to' the size of the number of multiples(length) needed.
+        //Step 4: Create an empty array with the size of the length param outside of the loop.
+        //Step 5: Convert the double number to an int as the current index and set that as index of the array and populate it with the current multiple.
     }
 
     /// <summary>
@@ -38,9 +35,19 @@ public static class Arrays
     /// </summary>
     public static void RotateListRight(List<int> data, int amount)
     {
-        // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        if (amount >= data.Count){
+            int index = amount % data.Count;
+            List<int> toAppend = data.GetRange(data.Count - index, index);
+            data.RemoveRange(data.Count - index, index);
+            data.InsertRange(0,toAppend);
+        } else{
+            List<int> toAppend = data.GetRange(data.Count - amount, amount);
+            data.RemoveRange(data.Count - amount, amount);
+            data.InsertRange(0,toAppend);
+        }
+       
     }
+
+    //Plan and Steps to create
+    //
 }
