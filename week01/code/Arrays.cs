@@ -13,6 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
+        //Steps to create:
+        //Step 1: Create a For loop that will increment by 1 each iteration, set as 1 initially.
+        //Step 2: Multiply input initial number by each increment.
+        //Step 3: Set the condition to 'less than or equal to' the size of the number of multiples(length) needed.
+        //Step 4: Create an empty array with the size of the length param outside of the loop.
+
+        var array = new double[length - 1];
+        for (double i = 1; i <= length; i++){
+            double multiple = number * i;
+            int index = (int)(i-1);
+            array[index] = multiple;
+        }
+
         return []; // replace this return statement with your own
     }
 
