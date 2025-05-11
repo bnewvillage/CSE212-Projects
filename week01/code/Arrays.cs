@@ -49,5 +49,9 @@ public static class Arrays
     }
 
     //Plan and Steps to create
-    //
+    //Understand the logic of rotating. To simplify, moving the first index 3 places means moving the numbers that would go out of bounds to the start of the list. By taking time to understand this process, we can make simply rearrangement of the list.
+    //Step 1. Get the modulus of the length/count of the list, so that we either get the number back itself or the remainder if it is divided by itself.
+    //Step 2. Create an if statement that takes the values that would be pushed away if the array was to move to the right. Using list.Count and subtracting it with the amount to move. Store these in a list using GetRange so we can append them later.
+    //Step 3. Delete from the initial list the range that we stored using GetRange, using RemoveRange.
+    //Step 4. Insert this range at index 0 of the initial list.
 }
