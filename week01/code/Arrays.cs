@@ -18,12 +18,16 @@ public static class Arrays
 
         return array;
 
-        //Plan and Steps:
-        //Step 1: Create a For loop that will increment by 1 each iteration, set as 1 initially.
-        //Step 2: Multiply input initial number by each increment to get our multiple.
-        //Step 3: Set the condition to 'less than or equal to' the size of the number of multiples(length) needed.
-        //Step 4: Create an empty array with the size of the length param outside of the loop.
-        //Step 5: Convert the double number to an int as the current index and set that as index of the array and populate it with the current multiple.
+        //To get the multiple of a number at a set amount.
+        //We need to only multiply it by a certain length increasing in 1 each iteration.
+        //Step 1: Create and empty array with the size of length param.
+        //Step 2: Create a for loop that increments in one as long as i or iteration is less than or equal to the length param.
+        //Step 3: Set everything to double to match the param, we will convert it to int later on.
+        //Step 4: intialize a 'multiple' by multiplying number param by the current iteration or index.
+        //Step 5: initialize an index valuable that is i minus one to match the array indexing.
+        //Step 6: Array of currrent index value set to the current multiple.
+        //Step 7. Return the array.
+
     }
 
     /// <summary>
