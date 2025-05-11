@@ -62,3 +62,20 @@ For (int iteration = 0; iteration <= size; iteration++){
 
 
 Create a new empty list,
+
+Interview questions:
+
+Instructions
+This assignment is meant to simulate the kind of question you might receive in a job interview. It is important for you to understand the problem, develop a quality solution, and communicate it in a clear and professional manner.
+
+You will need to record and upload a short video with your response to the question below. When making your video, please remember the following:
+
+Show your your face.
+Speak clearly.
+The video should be less than 3 minutes.
+The video should be uploaded as a public, but unlisted video, so the grader can see it without permissions.
+Questions
+In your video, provide a response to each of the following questions:
+
+What is an advantage of dynamic arrays compared to traditional, static arrays?
+What is a disadvantage of dynamic arrays compared to traditional, static arrays?
