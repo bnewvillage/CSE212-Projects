@@ -40,7 +40,8 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add items to the queue with Value and Priority value, Value being name. Duplicates are added.
     // Expected Result: Items with the same priority values will be dequeued in order of being queued.
-    // Defect(s) Found:  
+    // Defect(s) Found: No defects observed in priority-based ordering.
+
     public void TestPriorityQueue_2()
     {
         var bob = new PriorityItem("Bob", 20);
