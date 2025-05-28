@@ -1,3 +1,4 @@
+using System.Reflection.PortableExecutable;
 using System.Text.Json;
 
 public static class SetsAndMaps
@@ -22,7 +23,30 @@ public static class SetsAndMaps
     public static string[] FindPairs(string[] words)
     {
         // TODO Problem 1 - ADD YOUR CODE HERE
-        return [];
+        var wordSet = new HashSet<string>(words);
+        List<string> foundPair = new List<string>();
+        int index = 0;
+        foreach (string word in words)
+        {
+            char[] letters = word.ToCharArray();
+            Array.Reverse(letters);
+            string reversed = new string(letters);
+            wordSet.Remove(word);
+            if (wordSet.Contains(reversed))
+            {
+                wordSet.Remove(reversed);
+                foundPair.Add(reversed + " & " + word);
+
+                index++;
+            }
+            else
+            {
+                wordSet.Remove(word);
+            }
+        }
+        string[] result = foundPair.ToArray();
+
+        return result;
     }
 
     /// <summary>
@@ -42,7 +66,14 @@ public static class SetsAndMaps
         foreach (var line in File.ReadLines(filename))
         {
             var fields = line.Split(",");
-            // TODO Problem 2 - ADD YOUR CODE HERE
+            if (!degrees.ContainsKey(fields[3]))
+            {
+                degrees.Add(fields[3], 1);
+            }
+            else
+            {
+                degrees[fields[3]] = degrees[fields[3]] + 1;
+            }
         }
 
         return degrees;
@@ -66,8 +97,67 @@ public static class SetsAndMaps
     /// </summary>
     public static bool IsAnagram(string word1, string word2)
     {
-        // TODO Problem 3 - ADD YOUR CODE HERE
-        return false;
+        var firstWord = new Dictionary<char, int>();
+        foreach (char letter in word1.ToUpper())
+        {
+            if (letter.ToString() != " ")
+            {
+                if (!firstWord.ContainsKey(letter))
+                {
+                    firstWord.Add(letter, 1);
+                }
+                else
+                {
+                    firstWord[letter] = firstWord[letter] + 1;
+                }
+            }
+        }
+
+        var secondWord = new Dictionary<char, int>();
+        foreach (char letter in word2.ToUpper())
+        {
+            if (letter.ToString() != " ")
+            {
+                if (!secondWord.ContainsKey(letter))
+                {
+                    secondWord.Add(letter, 1);
+                }
+                else
+                {
+                    secondWord[letter] = secondWord[letter] + 1;
+                }
+            }
+            
+        }
+
+        if (firstWord.Count == secondWord.Count)
+        {
+            var status = true;
+            foreach (var pair in firstWord)
+            {
+                if (secondWord.ContainsKey(pair.Key))
+                {
+                    if (firstWord[pair.Key] == secondWord[pair.Key])
+                    {
+                        status = true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return status;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /// <summary>
