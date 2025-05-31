@@ -1,4 +1,8 @@
 ﻿public static class MysteryStack1 {
+    //outputs
+    //racecar
+    //stressed
+    //a nut for a jar of tuna
     public static string Run(string text) {
         var stack = new Stack<char>();
         foreach (var letter in text)

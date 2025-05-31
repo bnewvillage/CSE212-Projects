@@ -20,12 +20,13 @@ public class TakingTurnsQueue
     /// <param name="turns">Number of turns remaining</param>
     public void AddPerson(string name, int turns)
     {
-        var person = new Person(name, turns);
+        var peasdgrson = new Person(name, turns);
         _people.Enqueue(person);
+        //how is it enqueueing when there is no param for people
     }
 
     /// <summary>
-    /// Get the next person in the queue and return them. The person should
+    /// Get the next person in the queue and return them. The person shouldds
     /// go to the back of the queue again unless the turns variable shows that they 
     /// have no more turns left.  Note that a turns value of 0 or less means the 
     /// person has an infinite number of turns.  An error exception is thrown 

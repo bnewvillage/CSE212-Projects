@@ -1,85 +1,56 @@
-11317
+racecar
+
+stack of chars
+
+r a c e c a r
+
+result = ""
+
+While stack count (7)>  0
+pop stacks
+
+stack:
+racecar
+
+count: 7
+
+6 - raceca
+5 - racec
+4 - race
+3 - rac
+2 - ra
+1 - r
+0 stop
+
+result is r
+
+push vs add?
+
+a nut for a jar of tuna
+
+result: a
+
+desserts
+
+anut fo raj a rof tun a
+
+stack 2
+
+inputs:
+text
+
+stack type: float
+
+for each word
 
 
 
-O(n^2) Sorting.cs
-O(n)
-O(n^2)
-O(n)
-
-Prediction:
-Sort1 is O(n) so it will have linear performance to it's input
-Sort2 is O(log n) so it will perform much faster
-
-Create a For loop that increments in 1 each iteration.
-Multiply the number for each increment. Condition to stop if greater than length minus 1.
-
-var array = new double[length - 1];
-        for (double i = 1; i <= length; i++){
-            double multiple = number * i;
-            int index = (int)(i-1);
-            array[index] = multiple;
-        }
-var multiples = int[6];
-For (i = 1; i <= length.Length; i++){
-    multiple = number * i; 
-    multiples.Add[multiple]
-}
 
 
-RotateListRight
-
-This is essentially pushing and array to the right. So all we need to do is to create a new list that has the same size. Populate that list with the proper or needed / requested order. 
-
-So 1 2 3 4 5 6 let's say i have to create a new array
-
-new <List>[9]
-
-For loop? 
-
-Pushing 3
-
-index 0 + 3 = index 3
-0 3
-1 4
-2 5
-3 6
-4 7
-5 8
-6 9
-
-if new index is > size
-
-6 10
-then 10 - size = 1
-6 1
-7 2
-8 3
-
-For (int iteration = 0; iteration <= size; iteration++){
-    if (list + moveAmount <= size){
-        new List.Add[list[1 + moveAmount]]
-    }
-    else if{
-        new List.Add[list[1 + moveAmount - size]]
-}
 
 
-Create a new empty list,
 
-Interview questions:
 
-Instructions
-This assignment is meant to simulate the kind of question you might receive in a job interview. It is important for you to understand the problem, develop a quality solution, and communicate it in a clear and professional manner.
 
-You will need to record and upload a short video with your response to the question below. When making your video, please remember the following:
-
-Show your your face.
-Speak clearly.
-The video should be less than 3 minutes.
-The video should be uploaded as a public, but unlisted video, so the grader can see it without permissions.
-Questions
-In your video, provide a response to each of the following questions:
-
-What is an advantage of dynamic arrays compared to traditional, static arrays?
-What is a disadvantage of dynamic arrays compared to traditional, static arrays?
+object owns methods
+- methods only work for queue objects. so 

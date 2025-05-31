@@ -14,37 +14,37 @@
 
         Console.WriteLine("------------");
 
-        // Test 2
-        // Scenario: Enqueue multiple values and then Dequeue all of them
-        // Expected Result: It should display 200, then 300, then 400 in that order
-        Console.WriteLine("Test 2");
-        queue = new SimpleQueue();
-        queue.Enqueue(200);
-        queue.Enqueue(300);
-        queue.Enqueue(400);
-        value = queue.Dequeue();
-        Console.WriteLine(value);
-        value = queue.Dequeue();
-        Console.WriteLine(value);
-        value = queue.Dequeue();
-        Console.WriteLine(value);
-        // Defect(s) Found: 
+        // // Test 2
+        // // Scenario: Enqueue multiple values and then Dequeue all of them
+        // // Expected Result: It should display 200, then 300, then 400 in that order
+        // Console.WriteLine("Test 2");
+        // queue = new SimpleQueue();
+        // queue.Enqueue(200);
+        // queue.Enqueue(300);
+        // queue.Enqueue(400);
+        // value = queue.Dequeue();
+        // Console.WriteLine(value);
+        // value = queue.Dequeue();
+        // Console.WriteLine(value);
+        // value = queue.Dequeue();
+        // Console.WriteLine(value);
+        // // Defect(s) Found: 
 
-        Console.WriteLine("------------");
+        // Console.WriteLine("------------");
 
-        // Test 3
-        // Scenario: Dequeue from an empty Queue
-        // Expected Result: An exception should be raised
-        Console.WriteLine("Test 3");
-        queue = new SimpleQueue();
-        try {
-            queue.Dequeue();
-            Console.WriteLine("Oops ... This shouldn't have worked.");
-        }
-        catch (IndexOutOfRangeException) {
-            Console.WriteLine("I got the exception as expected.");
-        }
-        // Defect(s) Found: 
+        // // Test 3
+        // // Scenario: Dequeue from an empty Queue
+        // // Expected Result: An exception should be raised
+        // Console.WriteLine("Test 3");
+        // queue = new SimpleQueue();
+        // try {
+        //     queue.Dequeue();
+        //     Console.WriteLine("Oops ... This shouldn't have worked.");
+        // }
+        // catch (IndexOutOfRangeException) {
+        //     Console.WriteLine("I got the exception as expected.");
+        // }
+        // // Defect(s) Found: 
     }
 
     private readonly List<int> _queue = new();
