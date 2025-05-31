@@ -83,3 +83,22 @@ In your video, provide a response to each of the following questions:
 
 What is an advantage of dynamic arrays compared to traditional, static arrays?
 What is a disadvantage of dynamic arrays compared to traditional, static arrays?
+
+public void InsertHead(int value)
+    {
+        // Create new node
+        Node newNode = new(value);
+        // If the list is empty, then point both head and tail to the new node.
+        if (_head is null)
+        {
+            _head = newNode;
+            _tail = newNode;
+        }
+        // If the list is not empty, then only head will be affected.
+        else
+        {
+            newNode.Next = _head; // Connect new node to the previous head
+            _head.Prev = newNode; // Connect the previous head to the new node
+            _head = newNode; // Update the head to point to the new node
+        }
+    }
